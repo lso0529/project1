@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+	
+	<!-- interceptor 설정(servlet-context.xml과 동일한 설정) -->
+	<!-- mapping tag의 요청이 들어오면 아래의 bean 동작
+	<interceptors>
+		<interceptor>
+			<mapping path="/session/updatePage"/>
+			<mapping path="/session/myPage"/>
+			<beans:bean class="org.zerock.util.loginInterceptor"/>
+		</interceptor>
+	</interceptors> -->
+	
+	<!-- 1. AOP 라이브러리 다운로드(pom.xml) -->
+	<!-- 2. namespace aop 추가 -->
+	<!-- 3. AOP 스캔 설정 -->
+	<context:component-scan base-package="org.zerock.util"/>
+	<!-- AOP 어노테이션을 사용할 수 있게 하는 태그 설정 -->
+	<aop:aspectj-autoproxy/>
+</beans:beans>
