@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="org.zerock.random.mapper.RandomMapper">
+	<select resultType="org.zerock.random.command.RandomVO">
+		select * from food01 where fno = #{fno}
+	</select>
+</mapper>

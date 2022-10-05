@@ -40,6 +40,7 @@
 	<mybatis-spring:scan base-package="org.zerock.board.mapper"/>
 	<mybatis-spring:scan base-package="org.zerock.member.mapper"/>
 	<mybatis-spring:scan base-package="org.zerock.reply.mapper"/>
+	<mybatis-spring:scan base-package="org.zerock.random.mapper"/>
 	
 	
 		
