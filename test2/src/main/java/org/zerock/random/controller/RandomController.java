@@ -22,9 +22,9 @@ public class RandomController {
 		
 		System.out.println(fno);
 		
-//		RandomVO vo = service.selectfood(fno);
+		RandomVO vo = service.selectfood(fno);
 		
-		model.addAttribute("vo", fno);
+		model.addAttribute("vo", vo);
 		
 		return "/random/result";
 	}

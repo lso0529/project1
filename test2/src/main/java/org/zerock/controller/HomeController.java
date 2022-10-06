@@ -36,9 +36,9 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping("/index")
+	@RequestMapping("/home")
 	public String index() {
-		return "index";
+		return "home";
 	}
 	
 }
